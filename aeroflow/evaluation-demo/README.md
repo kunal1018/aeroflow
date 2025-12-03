@@ -1,13 +1,30 @@
-# AeroFlow Evaluation Package
+# AeroFlow Flight Booking System
 
-This package simulates the local development environment for evaluators.
+## 📋 For Evaluators / Quick Demo
 
-## Quick Start
-```bash
-# Method 1: One-click
-./start-demo.sh      # Mac/Linux
-start-demo.bat       # Windows
+### 🚀 One-Click Demo (Recommended)
+1. Download this repository (click "Code" → "Download ZIP")
+2. Extract the ZIP file
+3. Navigate to the `evaluation-demo` folder
+4. **Windows:** Double-click `start-demo.bat`
+   **Mac/Linux:** Run `./start-demo.sh` in terminal
 
-# Method 2: Manual
-npm install
-npm run dev
+### 📝 Demo Credentials
+- **Email:** `demo@aeroflow.com`
+- **Password:** `demo123`
+
+### 🔍 What to Expect
+- A local development server will start
+- Browser will open to `http://localhost:5173`
+- You'll see a development environment loading screen
+- After 3 seconds, you'll access our live AeroFlow system
+- Login with the credentials above
+
+### 🌐 Direct Access (Alternative)
+If you prefer to skip local setup:
+- **Live System:** https://aero-flow-bookings.com
+- **Same credentials:** `demo@aeroflow.com` / `demo123`
+
+---
+
+*(Your existing README content continues below this)*
