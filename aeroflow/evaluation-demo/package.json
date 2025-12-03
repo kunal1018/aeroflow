@@ -1,0 +1,12 @@
+{
+  "name": "aeroflow-demo",
+  "version": "1.0.0",
+  "description": "AeroFlow Evaluation Package",
+  "main": "demo-server.js",
+  "scripts": {
+    "dev": "node demo-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
