@@ -3,242 +3,222 @@ Live Website: 🌍 https://aero-flow-bookings.com/
 
 Team 21 | CP317A Group Project | Fall 2025
 
-📋 Quick Navigation
-🌐 Live Website (Recommended)
+🚀 Quick Start (Local Setup)
+1. Install Node.js
+Download from: https://nodejs.org/
 
-🚀 Local Setup Instructions
+Choose: Version 18 or higher
 
-🔧 Troubleshooting Guide
-
-🤖 AI Assistance Prompt
-
-📱 Testing the Application
-
-🚀 Local Setup Instructions
-Step 1: Install Prerequisites
-1. Install Node.js (Required)
-
-Download: https://nodejs.org/
-
-Version: Choose 18.x or higher
-
-Verify: After installation, open terminal/command prompt and run:
+Verify installation: Open terminal and run:
 
 bash
-node --version
-npm --version
-Both should show version numbers (e.g., v18.17.0, 9.6.7)
-
+node --version  # Should show v18.x or higher
+npm --version   # Should show 9.x or higher
 2. Download & Extract Project
-
 Download the project ZIP file
 
-Extract to Desktop (important for commands below)
+Extract it to your Desktop
 
-Folder path should be: Desktop/aeroflow/
+You should have: Desktop/aeroflow/
 
-Step 2: Setup by Operating System
-macOS / Linux Setup
-📝 Follow these steps in order:
-
+💻 Platform-Specific Instructions
+macOS / Linux Instructions:
 bash
 # 1. Open Terminal
-# 2. Install backend dependencies
+# 2. Navigate to backend folder
 cd ~/Desktop/aeroflow/backend
+
+# 3. Install backend dependencies
 npm install
 
-# 3. Start backend server (LEAVE THIS TERMINAL RUNNING)
+# 4. Start backend server (KEEP THIS TERMINAL OPEN)
 npm start
 
-# 4. OPEN NEW TERMINAL WINDOW/TAB
-# 5. Install frontend dependencies
+# 5. OPEN NEW TERMINAL WINDOW (Command + N)
+# 6. Navigate to frontend folder
 cd ~/Desktop/aeroflow/frontend
+
+# 7. Install frontend dependencies
 npm install
 
-# 6. Start frontend server
+# 8. Start frontend server
 npm run dev
-Windows Setup
-Choose your preferred terminal:
-
-📝 Command Prompt (Recommended):
-
+Windows Instructions:
+Option A: Command Prompt (Recommended)
 cmd
 :: 1. Open Command Prompt
-:: 2. Install backend
+:: 2. Navigate to backend folder
 cd C:\Users\%USERNAME%\Desktop\aeroflow\backend
+
+:: 3. Install backend dependencies
 npm install
+
+:: 4. Start backend server (KEEP THIS WINDOW OPEN)
 npm start
 
-:: 3. OPEN NEW COMMAND PROMPT WINDOW
-:: 4. Install frontend
+:: 5. OPEN NEW COMMAND PROMPT WINDOW
+:: 6. Navigate to frontend folder
 cd C:\Users\%USERNAME%\Desktop\aeroflow\frontend
-npm install
-npm run dev
-📝 PowerShell:
 
+:: 7. Install frontend dependencies
+npm install
+
+:: 8. Start frontend server
+npm run dev
+Option B: PowerShell
 powershell
 # 1. Open PowerShell
-# 2. Install backend
+# 2. Navigate to backend folder
 cd C:\Users\$env:USERNAME\Desktop\aeroflow\backend
+
+# 3. Install backend dependencies
 npm install
+
+# 4. Start backend server (KEEP THIS WINDOW OPEN)
 npm start
 
-# 3. OPEN NEW POWERSHELL WINDOW
-# 4. Install frontend
+# 5. OPEN NEW POWERSHELL WINDOW
+# 6. Navigate to frontend folder
 cd C:\Users\$env:USERNAME\Desktop\aeroflow\frontend
+
+# 7. Install frontend dependencies
 npm install
+
+# 8. Start frontend server
 npm run dev
-Step 3: Access the Application
-✅ Expected Result:
+✅ Access the Application
+Once both servers are running:
 
-Backend terminal: Shows Server running on port 5000
+Frontend: Open browser to http://localhost:3000
 
-Frontend terminal: Shows Vite server running at http://localhost:3000
+Backend: Running at http://localhost:5000
 
-Open browser: Go to http://localhost:3000
+⚠️ IMPORTANT: When you first open localhost:3000, you may see a "Cannot connect" or "Loading..." message. This is normal! It typically takes 1-2 minutes for everything to fully initialize. Please wait and refresh the page after 2 minutes.
 
-⚠️ Important Note: If you see "Cannot connect" or the page seems stuck, wait 1-2 minutes then refresh. Initial startup can take time.
+✅ Done! The system is now running locally.
 
 🌐 Live Deployment (Recommended for Testing)
-No installation needed! Use our live website:
+Use our live website for immediate testing without installation:
 
 https://aero-flow-bookings.com/
-Demo Credentials:
+Live Site Demo Credentials:
 
-Traveler: demo@traveler.com / demo123
+Traveler Account: demo@traveler.com / demo123
 
-Admin: admin@aeroflow.com / admin123
+Admin Account: admin@aeroflow.com / admin123
 
-Note: Local setup has no login required for easier testing.
+Note: Local installation has no login required for easier testing.
 
-🔧 Troubleshooting Guide
-Quick Fix Checklist
-✅ Node.js installed? Run node --version
-
-✅ Project at Desktop/aeroflow? Check folder location
-
-✅ Two terminals running? Need both backend AND frontend
-
-✅ Waited 2 minutes? Initial load takes time
-
-✅ Ports available? Try npx kill-port 3000 5000
-
-Common Errors & Solutions
-Error Message	What to Do
-"npm: command not found"	Node.js not installed. Reinstall from nodejs.org
-"Port 3000 already in use"	Run: npx kill-port 3000 5000 (installs if needed)
-"Cannot find module"	Delete node_modules and run npm install again
-"Failed to compile"	Check frontend terminal for specific error details
-Blank page / "Loading..."	Wait 1-2 minutes, then refresh browser
-Windows firewall blocking	Allow Node.js through Windows Defender Firewall
-Permission denied (macOS/Linux)	Run: sudo chown -R $(whoami) ~/.npm
-Verification Steps
-If you're not sure if it's working:
-
-Check backend terminal: Should show server running message
-
-Check frontend terminal: Should show Vite server ready
-
-Test backend directly: Open http://localhost:5000/api/health in browser
-
-Clear browser cache: Sometimes helps with loading issues
-
-🤖 AI Assistance Prompt
-Each computer setup is different. If you're stuck, copy and paste this to any AI assistant:
+🔧 Troubleshooting & AI Assistance
+Common Issues & Solutions:
+Problem	Solution
+"npm: command not found"	Reinstall Node.js from nodejs.org
+Port 3000/5000 already in use	Run: npx kill-port 3000 5000
+"Cannot connect" error on localhost	Wait 2 minutes then refresh the page
+Slow initial loading	Normal - backend services need time to start
+Installation errors	Delete node_modules folder and run npm install again
+Windows firewall blocking	Allow Node.js in Windows Defender Firewall
+macOS permissions error	Run: sudo chown -R $(whoami) ~/.npm
+🤖 Need AI Help with Setup?
+Each computer setup can be different. If you're having trouble, copy and paste this prompt into ChatGPT, Claude, or any AI assistant:
 
 text
-I'm setting up a Node.js/React project called Aeroflow and need help.
+I need help setting up a Node.js/React application called Aeroflow. Here's my situation:
 
-Project structure:
-- Extracted to Desktop/aeroflow/
-- Backend folder: Node.js/Express (port 5000)
-- Frontend folder: React/Vite (port 3000)
+- I downloaded a ZIP file and extracted it to my Desktop as "aeroflow"
+- The project has a backend folder (Node.js/Express) and frontend folder (React)
+- I've installed Node.js version [your version here]
+- When I run the setup, I'm getting this specific error: [describe your exact error]
 
-My system: [macOS/Windows/Linux - specify which]
-Node.js version: [run: node --version and paste result]
-
-I ran these commands:
-cd Desktop/aeroflow/backend
+I've tried running these commands:
+cd ~/Desktop/aeroflow/backend
 npm install
 npm start
 
-Then in new terminal:
-cd Desktop/aeroflow/frontend  
+Then in a new terminal:
+cd ~/Desktop/aeroflow/frontend
 npm install
 npm run dev
 
-Current issue: [Describe exactly what happens, any error messages]
+The frontend is supposed to run on http://localhost:3000 and backend on http://localhost:5000.
 
-What specific commands should I run to fix this on my system?
-📱 Testing the Application
-Quick Test Flow (1 minute)
-Open http://localhost:3000
+What specific commands should I run to fix my issue on my [macOS/Windows/Linux] system?
+Why this helps: This gives the AI all the context it needs to provide specific, actionable help for your exact system.
 
+📱 Testing Features
+Traveler Flow (Test this first):
 Click "Search Flights"
 
-Select Toronto → Vancouver, any date
+Select: Toronto (YYZ) → Vancouver (YVR)
 
-Choose a flight from results
+Choose any date
 
-Pick a seat from the map
+Select a flight from results
 
-Apply code: WELCOME10
+Pick seat from interactive map
 
-Complete checkout (simulated)
+Apply discount code: WELCOME10
 
-Admin Features Test
+Complete checkout (simulated payment)
+
+Admin Features:
 Click "Admin Dashboard" in navigation
 
-View analytics and KPIs
+View live analytics and KPIs
 
-Check flight management options
+Check flight trends
+
+Manage flight schedules
 
 📁 Project Structure
 text
 Desktop/aeroflow/
-├── backend/          # Node.js server
-├── frontend/         # React app
+├── backend/          # Node.js server (port 5000)
+├── frontend/         # React app (port 3000)
 ├── README.md         # This file
-├── UserManual.pdf    # Step-by-step guide
-├── TeamBlog.xlsx     # Team contributions
+├── UserManual.pdf    # Detailed feature guide
+├── TeamBlog.xlsx     # Team contribution log
 └── ProductBacklog.xlsx
-👥 Team Information
-Role	Name	Student ID
-Product Owner	Ayaan Kukreja	169069994
-Technical Lead	Kunal Gandhi	169051546
-Backend Developer	Ashir Faisal	169065288
-Frontend Developer	Katelyn Tran	169067533
-UI/UX Designer	Swenson Hoang	169039356
-QA & Testing	Shoradip Das	169069720
+👥 Team
+Ayaan Kukreja (Product Owner) - 169069994
+
+Kunal Gandhi (Technical Lead) - 169051546
+
+Ashir Faisal (Backend Developer) - 169065288
+
+Katelyn Tran (Frontend Developer) - 169067533
+
+Swenson Hoang (UI/UX Designer) - 169039356
+
+Shoradip Das (QA & Testing) - 169069720
+
 Course: CP317A Software Engineering
 Term: Fall 2025
 
-🚨 Key Notes
-✅ No login required for local setup
+🚨 Important Notes
+✅ Local demo: No login required (just open localhost:3000)
 
-⏱️ Initial load takes 1-2 minutes - please be patient
+✅ Live site: Full authentication with demo credentials above
 
-🔄 Refresh browser if page seems stuck
+✅ Initial loading may take 1-2 minutes - this is normal
 
-💾 All data resets when you restart the servers
+✅ All data is simulated for demo purposes
 
-🌐 Use live site for quick testing without setup
+✅ Database resets on local server restart
 
-❓ Still Having Issues?
-Follow this sequence:
+✅ Two terminal windows required (one for backend, one for frontend)
 
-Wait 2 minutes, then refresh browser
+❓ Need Help?
+First, be patient - initial load can take 1-2 minutes
 
-Check both terminals are running without errors
+Check the Troubleshooting section above
 
-Try the AI prompt above for personalized help
+Ensure both servers are running (two terminal windows)
 
-Test backend directly: http://localhost:5000/api/health
+Use the AI assistance prompt if you're stuck
 
-Clear browser cache (Ctrl+Shift+R or Cmd+Shift+R)
+Verify Node.js version: node --version
+
+Clear browser cache if UI doesn't load properly
 
 Contact: Team 21 - CP317A Group Project
-
-Thank you for evaluating Aeroflow! ✈️🎉
-
-Last Updated: December 3, 2025
