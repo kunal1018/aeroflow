@@ -1,160 +1,252 @@
-# AeroFlow Flight Booking System ✈️
+Aeroflow – Flight Booking System
+Project Overview
+Aeroflow is an intelligent flight booking system built for travelers and airline administrators. It features real-time flight search, seat selection, secure payments, discount codes, and an admin dashboard with analytics and AI-powered delay predictions.
 
-![AeroFlow Banner](https://img.shields.io/badge/AeroFlow-AI%20Powered%20Flight%20Booking-blue)
-![React](https://img.shields.io/badge/React-18.2.0-61DAFB)
-![Base44](https://img.shields.io/badge/Base44-Platform-7B42BC)
+Team 21: Ayaan Kukreja, Kunal Gandhi, Ashir Faisal, Katelyn Tran, Swenson Hoang, Shoradip Das
+GitHub Repository: [Insert your GitHub repo link here]
+Live Demo: [Insert live demo link if applicable]
 
-## 📋 Table of Contents
-- [Overview](#-overview)
-- [Quick Demo for Evaluators](#🚀-quick-demo-for-evaluators)
-- [Features](#✨-features)
-- [System Architecture](#🏗️-system-architecture)
-- [Installation & Setup](#⚙️-installation--setup)
-- [Project Structure](#📁-project-structure)
-- [Team](#👥-team)
-
----
-
-## 🎯 Overview
-
-AeroFlow is an advanced flight booking platform that leverages AI to provide real-time delay predictions, interactive seat selection, and seamless booking experience. Built with modern web technologies and integrated with the Base44 platform for scalable backend services.
-
-**Live System:** https://aero-flow-bookings.com
-
----
-
-## 🚀 Quick Demo for Evaluators
-
-### ⏱️ 2-Minute Setup Guide
-
-#### **Step 1: Download the Project**
-1. Click the **"Code"** button (green) at the top of this GitHub page
-2. Select **"Download ZIP"**
-3. Extract the ZIP file to your computer
-
-#### **Step 2: Run the Demo Package**
-Navigate to the evaluation folder:
-```bash
-# Open terminal/command prompt
-cd path/to/aeroflow-main/aeroflow/evaluation-demo
-
-
-Choose your operating system:
-
-Windows Users: Double-click start-demo.bat
-
-Mac/Linux Users: Run in terminal:
-
-bash
-chmod +x start-demo.sh  # Only needed once
-./start-demo.sh
-Step 3: What Happens
-A local development server starts on http://localhost:5173
-
-Your browser opens automatically
-
-You'll see a development environment loading screen
-
-After 3 seconds, you'll be redirected to our live AeroFlow system
-
-Login with the demo credentials below
-
-Demo Credentials
-Email: demo@aeroflow.com
-
-Password: demo123
-
-Direct Access (Alternative)
-If you prefer to skip local setup:
-
-Live URL: https://aero-flow-bookings.com
-
-Same credentials: demo@aeroflow.com / demo123
-
-✨ Features
-Feature	Description
-✈️ Real-time Flight Search	Search flights across 1000+ routes with live availability
-🎯 AI Delay Predictions	Machine learning models predict delays with 92% accuracy
-💺 3D Seat Selection	Interactive seat map with real-time availability
-📊 Admin Dashboard	Comprehensive analytics and management tools
-🔐 Secure Payments	PCI-compliant payment processing
-📱 Mobile Responsive	Fully responsive design for all devices
-🏗️ System Architecture
-text
-Frontend (This Repository)
-├── React 18 + Vite
-├── Tailwind CSS + Shadcn/ui
-├── Base44 SDK Integration
-└── Real-time WebSocket connections
-
-Backend (Base44 Platform)
-├── Authentication & User Management
-├── Flight Data API
-├── AI Prediction Models
-├── Payment Processing
-└── Database Services
-⚙️ Installation & Setup
+Quick Start Guide
 Prerequisites
-Node.js 18+ (Download)
+Node.js 18+ installed on your system
 
-npm 9+ (comes with Node.js)
+Git installed (for cloning)
 
-Modern web browser (Chrome/Firefox recommended)
+Step 1: Install Node.js (If Not Already Installed)
+macOS:
 
-Full Development Setup
 bash
-# 1. Clone repository
-git clone https://github.com/yourusername/aeroflow.git
-cd aeroflow
+# Using Homebrew (recommended)
+brew install node
 
-# 2. Install dependencies
+# Or download from nodejs.org
+Windows:
+
+Download installer from nodejs.org
+
+Run the installer (check "Add to PATH" during installation)
+
+Restart your terminal
+
+Linux (Ubuntu/Debian):
+
+bash
+sudo apt update
+sudo apt install nodejs npm
+Verify installation (all platforms):
+
+bash
+node --version
+npm --version
+You should see version numbers (e.g., v18.17.0, 9.6.7).
+
+Step 2: Download and Extract Project
+Download the project ZIP file from the submission
+
+Extract it to your Desktop
+
+The extracted folder should be named aeroflow
+
+Your Desktop should now have:
+
+text
+Desktop/
+└── aeroflow/
+    ├── backend/
+    ├── frontend/
+    ├── README.md
+    └── ...
+Step 3: Launch Aeroflow - Platform-Specific Commands
+For macOS/Linux Users:
+Open Terminal and run these commands exactly:
+
+bash
+# Navigate to Desktop
+cd ~/Desktop/aeroflow
+
+# Install backend dependencies
+cd backend
 npm install
 
-# 3. Start development server
+# Start backend server (in a NEW terminal window/tab)
+npm start
+
+# Now open a NEW terminal window/tab
+cd ~/Desktop/aeroflow/frontend
+npm install
 npm run dev
+For Windows Users:
+Open Command Prompt or PowerShell as Administrator and run:
 
-# 4. Open browser to:
-#    http://localhost:5173
-Environment Configuration
-Create .env.local file:
+cmd
+# Navigate to Desktop
+cd C:\Users\%USERNAME%\Desktop\aeroflow
 
-env
-VITE_BASE44_APP_ID=your-app-id
-VITE_API_URL=http://localhost:3000
-📁 Project Structure
+# Install backend dependencies
+cd backend
+npm install
+
+# Start backend server (in a NEW Command Prompt window)
+npm start
+
+# Now open a NEW Command Prompt window
+cd C:\Users\%USERNAME%\Desktop\aeroflow\frontend
+npm install
+npm run dev
+Alternative for Windows (Git Bash or WSL):
+
+bash
+# Navigate to Desktop
+cd /c/Users/%USERNAME%/Desktop/aeroflow
+
+# Install backend dependencies
+cd backend
+npm install
+
+# Start backend server (in a NEW terminal)
+npm start
+
+# Now open a NEW terminal
+cd /c/Users/%USERNAME%/Desktop/aeroflow/frontend
+npm install
+npm run dev
+Step 4: Access the Application
+Once both servers are running:
+
+Backend will be at: http://localhost:5000
+
+Frontend will be at: http://localhost:3000
+
+Open your browser and go to: http://localhost:3000
+
+Note: For demo purposes, no login is required. You can immediately access all features.
+
+Expected Output
+When you run the commands correctly, you should see:
+
+Backend Terminal:
+
+text
+Server running on port 5000
+Database connected successfully
+Frontend Terminal:
+
+text
+Vite server running at http://localhost:3000
+✓ ready in Xms
+Browser: Aeroflow homepage with navigation options.
+
+Troubleshooting
+Common Issues:
+"npm: command not found"
+
+Node.js isn't installed or not in PATH
+
+Fix: Reinstall Node.js and restart terminal
+
+"Port 3000/5000 already in use"
+
+Fix for macOS/Linux:
+
+bash
+sudo lsof -ti:3000 | xargs kill -9
+sudo lsof -ti:5000 | xargs kill -9
+Fix for Windows:
+
+cmd
+netstat -ano | findstr :3000
+taskkill /PID [PID] /F
+"Error: Cannot find module"
+
+Fix: Delete node_modules and reinstall:
+
+bash
+rm -rf node_modules package-lock.json
+npm install
+Slow npm install
+
+Fix: Clear npm cache:
+
+bash
+npm cache clean --force
+Testing the System
+Once Aeroflow is running, test these features:
+
+Traveler Features:
+Click "Search Flights"
+
+Select origin/destination/date
+
+Choose a flight
+
+Select a seat from the interactive map
+
+Proceed to checkout (no payment required for demo)
+
+Admin Features:
+Click "Admin Dashboard" in navigation
+
+View KPIs and analytics
+
+Test flight management options
+
+Project Structure
 text
 aeroflow/
-├── evaluation-demo/          # Quick demo package for evaluators
-│   ├── start-demo.sh        # Mac/Linux launcher
-│   ├── start-demo.bat       # Windows launcher
-│   ├── demo-server.js       # Local development server
-│   └── README.md            # Demo instructions
-├── src/                     # Source code
-│   ├── components/          # React components
-│   ├── pages/              # Page components
-│   ├── api/                # API integration
-│   ├── lib/                # Utilities
-│   └── App.jsx             # Main application
-├── public/                  # Static assets
-├── package.json            # Dependencies
-└── README.md               # This file
-👥 Team
-Role	Name	Responsibilities
-Product Owner	[Your Name]	Project management, requirements
-Lead Developer	[Name]	System architecture, core features
-Frontend Developer	[Name]	UI/UX implementation
-Backend Developer	[Name]	API integration, Base44 services
-QA Engineer	[Name]	Testing, validation
-📞 Support & Documentation
-Project Documentation: See /docs folder
+├── backend/          # Node.js/Express server
+│   ├── src/
+│   ├── package.json
+│   └── server.js
+├── frontend/         # React application
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+├── UserManual.pdf    # Detailed feature guide
+├── TeamBlog.xlsx     # Team contribution log
+└── README.md         # This file
+Quick Reference Commands
+All-in-One Launch Script (macOS/Linux)
+Save this as launch.sh in the aeroflow folder:
 
-API Reference: Available in source code
+bash
+#!/bin/bash
+cd ~/Desktop/aeroflow/backend
+npm install
+npm start &
+cd ../frontend
+npm install
+npm run dev
+Make it executable and run:
 
-Issue Reporting: GitHub Issues tab
+bash
+chmod +x launch.sh
+./launch.sh
+Windows Batch File
+Save this as launch.bat in the aeroflow folder:
 
-Team Contact: Provided in submission
+batch
+@echo off
+cd C:\Users\%USERNAME%\Desktop\aeroflow\backend
+call npm install
+start "Backend" npm start
+cd ..\frontend
+call npm install
+start "Frontend" npm run dev
+Need Help?
+If you encounter issues:
 
-📄 License
-This project is for academic purposes as part of CP317A course requirements.
+Check the Troubleshooting section above
 
-Thank you for evaluating AeroFlow! 🚀
+Ensure both servers are running (two terminal windows)
+
+Verify you're in the correct directory
+
+Clear browser cache if UI doesn't load properly
+
+Contact: Team 21 – CP317A Group Project
+
+Demo Note
+For evaluation purposes, authentication has been disabled. You can access all features immediately upon visiting http://localhost:3000.
+
+Thank you for evaluating Aeroflow!
+The system should now be running on your machine. If you have any setup issues, please refer to the troubleshooting guide or contact our team.
