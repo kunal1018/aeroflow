@@ -3,151 +3,242 @@ Live Website: 🌍 https://aero-flow-bookings.com/
 
 Team 21 | CP317A Group Project | Fall 2025
 
-🚀 Quick Start (Local Setup)
-1. Install Node.js
-Download from: https://nodejs.org/
+📋 Quick Navigation
+🌐 Live Website (Recommended)
 
-Choose: Version 18 or higher
+🚀 Local Setup Instructions
 
-Verify installation: Open terminal and run:
+🔧 Troubleshooting Guide
+
+🤖 AI Assistance Prompt
+
+📱 Testing the Application
+
+🚀 Local Setup Instructions
+Step 1: Install Prerequisites
+1. Install Node.js (Required)
+
+Download: https://nodejs.org/
+
+Version: Choose 18.x or higher
+
+Verify: After installation, open terminal/command prompt and run:
 
 bash
-node --version  # Should show v18.x or higher
-npm --version   # Should show 9.x or higher
+node --version
+npm --version
+Both should show version numbers (e.g., v18.17.0, 9.6.7)
+
 2. Download & Extract Project
+
 Download the project ZIP file
 
-Extract it to your Desktop
+Extract to Desktop (important for commands below)
 
-You should have: Desktop/aeroflow/
+Folder path should be: Desktop/aeroflow/
 
-3. Run the Application
-For macOS/Linux:
+Step 2: Setup by Operating System
+macOS / Linux Setup
+📝 Follow these steps in order:
+
 bash
-# Open Terminal
-# Navigate to project
+# 1. Open Terminal
+# 2. Install backend dependencies
 cd ~/Desktop/aeroflow/backend
-
-# Install dependencies
 npm install
 
-# Start backend (keep this terminal open)
+# 3. Start backend server (LEAVE THIS TERMINAL RUNNING)
 npm start
 
-# Open NEW terminal window
+# 4. OPEN NEW TERMINAL WINDOW/TAB
+# 5. Install frontend dependencies
 cd ~/Desktop/aeroflow/frontend
 npm install
+
+# 6. Start frontend server
 npm run dev
-For Windows:
+Windows Setup
+Choose your preferred terminal:
+
+📝 Command Prompt (Recommended):
+
 cmd
-:: Open Command Prompt
-:: Navigate to project
+:: 1. Open Command Prompt
+:: 2. Install backend
 cd C:\Users\%USERNAME%\Desktop\aeroflow\backend
-
-:: Install dependencies
 npm install
-
-:: Start backend (keep this window open)
 npm start
 
-:: Open NEW Command Prompt window
+:: 3. OPEN NEW COMMAND PROMPT WINDOW
+:: 4. Install frontend
 cd C:\Users\%USERNAME%\Desktop\aeroflow\frontend
 npm install
 npm run dev
-4. Access the Application
-Frontend: Open browser to http://localhost:3000
+📝 PowerShell:
 
-Backend: Running at http://localhost:5000
+powershell
+# 1. Open PowerShell
+# 2. Install backend
+cd C:\Users\$env:USERNAME\Desktop\aeroflow\backend
+npm install
+npm start
 
-✅ Done! The system is now running locally.
+# 3. OPEN NEW POWERSHELL WINDOW
+# 4. Install frontend
+cd C:\Users\$env:USERNAME\Desktop\aeroflow\frontend
+npm install
+npm run dev
+Step 3: Access the Application
+✅ Expected Result:
 
-🌐 Live Deployment
-Use our live website for immediate testing:
+Backend terminal: Shows Server running on port 5000
+
+Frontend terminal: Shows Vite server running at http://localhost:3000
+
+Open browser: Go to http://localhost:3000
+
+⚠️ Important Note: If you see "Cannot connect" or the page seems stuck, wait 1-2 minutes then refresh. Initial startup can take time.
+
+🌐 Live Deployment (Recommended for Testing)
+No installation needed! Use our live website:
 
 https://aero-flow-bookings.com/
-Live Site Credentials:
+Demo Credentials:
 
 Traveler: demo@traveler.com / demo123
 
 Admin: admin@aeroflow.com / admin123
 
-Note: Local installation has no login required for easier testing.
+Note: Local setup has no login required for easier testing.
 
-🔧 Troubleshooting
-Common Issues:
-"npm: command not found" → Reinstall Node.js
+🔧 Troubleshooting Guide
+Quick Fix Checklist
+✅ Node.js installed? Run node --version
 
-Port already in use → Run: npx kill-port 3000 5000
+✅ Project at Desktop/aeroflow? Check folder location
 
-Installation errors → Delete node_modules and run npm install again
+✅ Two terminals running? Need both backend AND frontend
 
-Slow installation → Run: npm cache clean --force
+✅ Waited 2 minutes? Initial load takes time
 
-Verify it's working:
-Backend terminal shows: Server running on port 5000
+✅ Ports available? Try npx kill-port 3000 5000
 
-Frontend terminal shows: Vite server running at http://localhost:3000
+Common Errors & Solutions
+Error Message	What to Do
+"npm: command not found"	Node.js not installed. Reinstall from nodejs.org
+"Port 3000 already in use"	Run: npx kill-port 3000 5000 (installs if needed)
+"Cannot find module"	Delete node_modules and run npm install again
+"Failed to compile"	Check frontend terminal for specific error details
+Blank page / "Loading..."	Wait 1-2 minutes, then refresh browser
+Windows firewall blocking	Allow Node.js through Windows Defender Firewall
+Permission denied (macOS/Linux)	Run: sudo chown -R $(whoami) ~/.npm
+Verification Steps
+If you're not sure if it's working:
 
-Browser loads Aeroflow homepage
+Check backend terminal: Should show server running message
 
-📱 Testing Features
-Traveler Features:
-Search flights (try Toronto → Vancouver)
+Check frontend terminal: Should show Vite server ready
 
-Select a flight
+Test backend directly: Open http://localhost:5000/api/health in browser
 
-Choose seat from interactive map
+Clear browser cache: Sometimes helps with loading issues
 
-Apply discount code "WELCOME10"
+🤖 AI Assistance Prompt
+Each computer setup is different. If you're stuck, copy and paste this to any AI assistant:
 
-Complete checkout (simulated payment)
+text
+I'm setting up a Node.js/React project called Aeroflow and need help.
 
-Admin Features:
-Click "Admin Dashboard"
+Project structure:
+- Extracted to Desktop/aeroflow/
+- Backend folder: Node.js/Express (port 5000)
+- Frontend folder: React/Vite (port 3000)
+
+My system: [macOS/Windows/Linux - specify which]
+Node.js version: [run: node --version and paste result]
+
+I ran these commands:
+cd Desktop/aeroflow/backend
+npm install
+npm start
+
+Then in new terminal:
+cd Desktop/aeroflow/frontend  
+npm install
+npm run dev
+
+Current issue: [Describe exactly what happens, any error messages]
+
+What specific commands should I run to fix this on my system?
+📱 Testing the Application
+Quick Test Flow (1 minute)
+Open http://localhost:3000
+
+Click "Search Flights"
+
+Select Toronto → Vancouver, any date
+
+Choose a flight from results
+
+Pick a seat from the map
+
+Apply code: WELCOME10
+
+Complete checkout (simulated)
+
+Admin Features Test
+Click "Admin Dashboard" in navigation
 
 View analytics and KPIs
 
-Check flight trends
-
-Manage flight schedules
+Check flight management options
 
 📁 Project Structure
 text
-aeroflow/
-├── backend/     # Node.js server
-├── frontend/    # React application
-├── README.md    # This file
-└── UserManual.pdf
-👥 Team Contact
-Ayaan Kukreja (Product Owner)
-
-Kunal Gandhi (Technical Lead)
-
-Ashir Faisal, Katelyn Tran, Swenson Hoang, Shoradip Das
-
+Desktop/aeroflow/
+├── backend/          # Node.js server
+├── frontend/         # React app
+├── README.md         # This file
+├── UserManual.pdf    # Step-by-step guide
+├── TeamBlog.xlsx     # Team contributions
+└── ProductBacklog.xlsx
+👥 Team Information
+Role	Name	Student ID
+Product Owner	Ayaan Kukreja	169069994
+Technical Lead	Kunal Gandhi	169051546
+Backend Developer	Ashir Faisal	169065288
+Frontend Developer	Katelyn Tran	169067533
+UI/UX Designer	Swenson Hoang	169039356
+QA & Testing	Shoradip Das	169069720
 Course: CP317A Software Engineering
-Instructor: [Instructor Name]
 Term: Fall 2025
 
-🚨 Important Notes
-✅ Local demo: No login required
+🚨 Key Notes
+✅ No login required for local setup
 
-✅ Live site: Full authentication experience
+⏱️ Initial load takes 1-2 minutes - please be patient
 
-✅ All data simulated for demo purposes
+🔄 Refresh browser if page seems stuck
 
-✅ Database resets on local restart
+💾 All data resets when you restart the servers
 
-Need Help?
-Check troubleshooting section above
+🌐 Use live site for quick testing without setup
 
-Ensure both servers are running
+❓ Still Having Issues?
+Follow this sequence:
 
-Clear browser cache if needed
+Wait 2 minutes, then refresh browser
+
+Check both terminals are running without errors
+
+Try the AI prompt above for personalized help
+
+Test backend directly: http://localhost:5000/api/health
+
+Clear browser cache (Ctrl+Shift+R or Cmd+Shift+R)
 
 Contact: Team 21 - CP317A Group Project
 
-Thank you for evaluating Aeroflow! 🎉
+Thank you for evaluating Aeroflow! ✈️🎉
 
 Last Updated: December 3, 2025
-
